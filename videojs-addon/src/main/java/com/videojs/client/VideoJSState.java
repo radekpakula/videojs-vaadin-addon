@@ -9,6 +9,7 @@ public class VideoJSState extends com.vaadin.shared.AbstractComponentState {
 	public List<String> sources = new ArrayList<String>();
 	public List<String> types = new ArrayList<String>();
 	public List<String> subtitles = new ArrayList<String>();
+	public List<String> attributes = new ArrayList<String>();
 	
    
     public String fileSource0;

@@ -16,6 +16,8 @@ public class VideoJS extends com.vaadin.ui.AbstractComponent {
 	};
     public VideoJS() {
         registerRpc(rpc);
+        setWidth(600,Unit.PIXELS);
+        setHeight(350,Unit.PIXELS);
     }
 
     @Override
@@ -31,6 +33,9 @@ public class VideoJS extends com.vaadin.ui.AbstractComponent {
 	public void appendSubtitles(File source, String srcLang, String label){
 		int counter = getState().subtitles.size();
 		setResource("subtitles"+counter, new FileResource(source));
-		getState().subtitles.add("{kind:\"subtitles\",srcLang:\""+srcLang+"\",label:\""+label+"\"}");
+		getState().subtitles.add("{\"kind\":\"subtitles\",\"srcLang\":\""+srcLang+"\",\"label\":\""+label+"\"}");
+	}
+	public void appendAttribute(String name, String value){
+		getState().attributes.add("{\""+name+"\":\""+value+"\"}");
 	}
 }

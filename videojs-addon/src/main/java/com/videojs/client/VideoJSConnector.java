@@ -47,6 +47,7 @@ public class VideoJSConnector extends AbstractComponentConnector {
         }
         getWidget().setSubtitleUrl(urls2);
         getWidget().rebuildPlayer();
+        getWidget().setAttributes(getState().attributes);
     }
     
 //	@OnStateChange("page")
